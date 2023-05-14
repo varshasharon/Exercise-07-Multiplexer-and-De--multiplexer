@@ -56,11 +56,12 @@ STEP 6: now we can save and run the porgram.
 
 
 ### PROGRAM 
+```
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: E. VARSHA SHARON
 RegisterNumber:  212222100058
-```
+
 MULTIPLEXER:
 module mux4 (s0,s1,a0,a1,a2,a3,y);
 input a0,a1,a2,a3,s0,s1;
@@ -87,9 +88,9 @@ and (y2,i,s1,s0bar);
 and (y1,i,s1bar,s0);
 and (y0,i,s1bar,s0bar);
 endmodule
-```
-*/
 
+*/
+```
 
 
 
