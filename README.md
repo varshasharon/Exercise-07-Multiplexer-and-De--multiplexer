@@ -57,7 +57,6 @@ STEP 6: now we can save and run the porgram.
 
 ### PROGRAM 
 ```
-/*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: E. VARSHA SHARON
 RegisterNumber:  212222100058
@@ -89,7 +88,6 @@ and (y1,i,s1bar,s0);
 and (y0,i,s1bar,s0bar);
 endmodule
 
-*/
 ```
 
 
