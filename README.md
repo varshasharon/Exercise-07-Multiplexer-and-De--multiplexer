@@ -47,15 +47,47 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
+STEP 1: Open the quartus 2 software give the file name to write the program. 
+STEP 2: Declare input and output variable throuugh module and filename. 
+STEP 3: Now,declare input,output and wire variables. 
+STEP 4: for multiplexer we use 2 not gate,4 and gate and 1 or gate which is output. similary, for demultiplexer we use 2 not gate and 4 and gate which is output. STEP 5: After completing program , we have to end program by using endmodule command which is used in verilog. 
+STEP 6: now we can save and run the porgram.
 
 
 
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: E. VARSHA SHARON
+RegisterNumber:  212222100058
+```
+MULTIPLEXER:
+module mux4 (s0,s1,a0,a1,a2,a3,y);
+input a0,a1,a2,a3,s0,s1;
+output y;
+wire a,b,c,d,s0bar,s1bar;
+not (s0bar,s0);
+not (s1bar,s1);
+and (a,s0,s1,a3);
+and (b,s0bar,s1,a2);
+and (c,s0,s1bar,a1);
+and (d,s0bar,s1bar,a0);
+or (y,a,b,c,d);
+endmodule
+
+DEMULTIPLEXER:
+module demux4 (i,s0,s1,y0,y1,y2,y3);
+input s0,s1,i;
+output y0,y1,y2,y3;
+wire s0bar,s1bar;
+not (s0bar,s0);
+not (s1bar,s1);
+and (y3,i,s1,s0);
+and (y2,i,s1,s0bar);
+and (y1,i,s1bar,s0);
+and (y0,i,s1bar,s0bar);
+endmodule
+```
 */
 
 
@@ -64,6 +96,11 @@ RegisterNumber:
 
 
 ### RTL LOGIC  
+## MULTIPLEXER
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/01bad343-3c91-4142-ac6a-64951d19ce3f)
+
+## DEMULTIPLEXER
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/9f6c4b11-5f5d-4fe3-9d33-a93fe3899efe)
 
 
 
@@ -73,16 +110,26 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS  
+## MULTIPLEXER
 
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/79061ce3-33cf-4ed7-909a-a1415777a6c3)
+
+## DEMULTIPLEXER
+
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/500ec112-6fa1-4941-99cd-08bbb0da0a2c)
 
 
 
 
 ### TRUTH TABLE 
+## MULTIPLEXER
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/cabfece7-e573-4c84-8c67-b3557b5e3563)
 
-
+## DEMULTIPLEXER
+![image](https://github.com/varshasharon/Exercise-07-Multiplexer-and-De--multiplexer/assets/98278161/ab520dc3-08b6-4026-a082-7237febe7cc6)
 
 
 
 
 ### RESULTS 
+Thus, the program to design multiplexer and de-multiplexer is successfully completed.
